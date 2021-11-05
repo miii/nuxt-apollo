@@ -1,0 +1,49 @@
+{
+  "name": "@miii/nuxt-apollo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Jacob Andersson",
+    "url": "http://github.com/miii"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./module": "./dist/module.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "siroc build",
+    "dev": "nuxt test/fixture",
+    "server": "jiti server/index.ts"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.4.16",
+    "@vue/apollo-composable": "^4.0.0-alpha.15",
+    "@vue/apollo-ssr": "^4.0.0-alpha.15",
+    "cross-fetch": "^3.1.4",
+    "graphql": "^15.7.2"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "@nuxtjs/composition-api": "^0.29.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql-tag": "^2.12.5",
+    "jiti": "^1.12.9",
+    "nuxt": "^2.15.8",
+    "siroc": "^0.16.0"
+  },
+  "peerDependencies": {
+    "@nuxtjs/composition-api": "^0.29",
+    "nuxt": "^2",
+    "vue": "^2"
+  }
+}
